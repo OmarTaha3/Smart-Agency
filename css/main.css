@@ -1,0 +1,359 @@
+/*Start global Rules*/
+:root{
+    --main-color:#03a9f4;
+}
+/*End global Rules*/
+
+/*Start Global Components*/
+.settings-box{
+    z-index: 1000;
+    left: -30%;
+    transition: 0.3s;
+    width:30%;
+    border-right: 1px solid rgb(0 0 0 / .2);
+}
+@media (max-width: 768px) {  
+    .settings-box {
+        width:30%;
+        left:-30%
+    } 
+}
+.settings-box.open{
+    left:0;
+}
+.settings-box .toggle-setting{
+    top:25%;
+    right:-40px;
+    cursor: pointer;
+    border:1px solid rgb(0 0 0 / .2);
+    border-left-color: white;
+}
+.settings-box .toggle-setting i{
+    color: var(--main-color);
+}
+.settings-box .list-group li{
+    width:30px;
+    height:30px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.settings-box .list-group li.active{
+    opacity: 1;
+    width:33px;
+    height:33px;
+}
+.settings-box .list-group li:first-child{
+    background-color:#03a9f4
+}
+.settings-box .list-group li:nth-child(2){
+    background-color:#ff9800
+}
+.settings-box .list-group li:nth-child(3){
+    background-color:#e91e63
+}
+.settings-box .list-group li:nth-child(4){
+    background-color:#009688
+}
+.settings-box .list-group li:nth-child(5){
+    background-color:#4caf50
+}
+.form-switch .form-check-input{
+    min-width:20%;
+    cursor:pointer;
+}
+.form-switch .form-check-input:focus{
+    box-shadow: none;
+    border-color:var(--main-color);
+}
+.option-box input:checked{
+    background-color: var(--main-color);
+    border-color: var(--main-color)
+}
+.nav-bullets{
+    z-index: 1000;
+    width:40px;
+}
+.nav-bullets .bullet{
+    width:20px;
+    height:20px;
+    border:2px solid var(--main-color);
+}
+.nav-bullets .bullet .tool-tip{
+    width:120px;
+    right:30px;
+    top:-8px;
+    background-color: var(--main-color);
+    pointer-events: none;
+}
+.nav-bullets .bullet:hover .tool-tip{
+    display: block !important;
+}
+.nav-bullets .bullet .tool-tip::before{
+    font-family: 'Font Awesome 6 Free';
+    content: '\f0da';
+    right:-8px;
+    font-weight: 900;
+    position:absolute;
+    top:-5px;
+    color: white;
+    font-size: 28px;
+    color: var(--main-color);
+}
+button{
+    background-color: var(--main-color) !important;
+}
+/*End Global Components*/
+
+/*Start Landing Page*/
+.landing-page{
+    background-image: url('../imgs/01.jpg');
+    background-size: cover;
+    transition: 0.5s;
+}
+.landing-page .overlay{
+    background-color: rgb(0 0 0 / 60%);
+}
+.landing-page .navbar-brand{
+    color: var(--main-color) !important;
+}
+.landing-page h1 span{
+    color: var(--main-color);
+}
+.landing-page ul li .nav-link{
+    color: white;
+}
+.landing-page ul li .nav-link.active,
+.landing-page ul li .nav-link:hover{
+    color: var(--main-color);
+}
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+@media (max-width:767px) {
+    .landing-page .website-header{
+        position: relative !important;
+        left: 0 !important;
+        top:10px !important;
+        transform: translate(0) !important;
+    }
+}
+/*End Landing Page*/
+
+/*Start About US*/
+.about-us .row h2{
+    color:var(--main-color)
+}
+/*End About US*/
+
+/*Start Our Skills*/
+.skills h2{
+    color: var(--main-color);
+}
+.skills .card .card-body span{
+    width:20%;
+}
+.skills .card .card-body .progress{
+    height:1.5rem
+}
+.skills .card .card-body .progress-bar{
+    background-color: var(--main-color);
+    transition: 0.5s;
+    width: 0;
+}
+/*End Our Skills*/
+
+/*Start Our Gallery*/
+.gallery h2{
+    color: var(--main-color);
+}
+.gallery .row img:hover{
+    border-color: var(--main-color) !important;
+}
+.popup-overlay{
+    position: fixed;
+    background-color: rgb(0 0 0 / 50%);
+    left: 0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 1000;
+}
+.popup-box{
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1001;
+    border-radius: 10px;
+    border: 1px solid rgba(0 0 0 / 0.175) ;
+}
+.popup-box h3{
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-color);
+    margin: 0;
+}
+.popup-box img{
+    max-width: 100%;
+    margin-top:20px;
+}
+.close-button{
+    position: absolute;
+    width:40px;
+    height:40px;
+    top:-15px;
+    right:-15px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-weight:bold;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+/*End Our Gallery*/
+
+/*Start Timeline*/
+.timeline .container::before{
+    content: '';
+    width:2px;
+    height:100%;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+}
+.timeline .year{
+    margin:20px auto;
+    width:50px;
+    padding: 2px 7px;
+    background-color: var(--main-color);
+    color: white;
+    z-index: 1;
+}
+.timeline .row h3{
+    color: var(--main-color);
+}
+.timeline .left::before,
+.timeline .right::before{
+    content: '';
+    width:14px;
+    height:14px;
+    background-color: white;
+    border-radius: 50%;
+    border:3px solid var(--main-color);
+    position:absolute;
+}
+.timeline .left::before{
+    right:-22px;
+}
+.timeline .right::before{
+    left:-24px;
+}
+.timeline .left,
+.timeline .right{
+    border: 2px solid var(--main-color)
+}
+.timeline .left::after,
+.timeline .right::after{
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position:absolute;
+    top:9px;
+    color: white;
+    font-size: 20px;
+    color: var(--main-color);
+}
+.timeline .left::after{
+    content: '\f0da';
+    right:-8px;
+}
+.timeline .right::after{
+    content: '\f0d9';
+    left:-8px;
+}
+@media (max-width:767px) {
+    .timeline .left::after,
+    .timeline .right::after,
+    .timeline .left::before,
+    .timeline .right::before{
+        display: none;
+    }
+    .timeline .row-left{
+        margin-left: 0;
+    }
+}
+
+/*End Timeline*/
+
+/*Start Our Features*/
+.features .row div h4{
+    color: var(--main-color);
+}
+/*End Our Features*/
+
+/*Start Testimonials*/
+.testimonials {
+    background-image: 
+    conic-gradient( black 180deg, var(--main-color) 180deg);
+}
+.testimonials .title h5{
+    color: var(--main-color);
+}
+@media (max-width:767px){
+    .testimonials .row{
+        flex-direction: column;
+        padding: 0 5px;
+    }
+}
+/*End Testimonials*/
+
+
+/*Start Contact Us*/
+.contact{
+    background-image:url('../imgs/contact.png');
+    background-size: cover;
+}
+.contact .overlay{
+    background-color:rgb(255, 255, 255, .6)
+}
+.contact h2{
+    color: var(--main-color);
+}
+.contact form input:not([type='submit']),
+.contact form textarea{
+    border:1px solid rgb(0 0 0 / 0.175);
+    background-color:rgb(218 218 218 / .19)
+}
+.contact form input:not([type='submit']):focus,
+.contact form textarea:focus{
+    outline: 1px solid var(--main-color);
+}
+.contact form input:not([type='submit'])::placeholder,
+.contact form textarea::placeholder{
+    transition: 0.3s;
+}
+.contact form input:not([type='submit']):focus::placeholder,
+.contact form textarea:focus::placeholder{
+    opacity: 0;
+}
+.contact form input[type='submit']{
+    background-color: var(--main-color);
+    border:1px solid var(--main-color);
+}
+.contact form input{
+    height:37px;
+}
+.contact form textarea{
+    height:calc(100% - 37px - 16px)
+}
+/*End Contact Us*/
+
+/*Start Footer*/
+footer .last-element{
+    background-color: var(--main-color);
+}
+/*End Footer*/

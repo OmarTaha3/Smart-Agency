@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agency</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--Normalize File-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--Main CSS File-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--Start Setting-box-->
+    <div class="settings-box h-100 bg-white position-fixed p-2">
+        <div class="toggle-setting position-absolute  fs-4 bg-white">
+            <i class="fa fa-gear p-2"></i>
+        </div>
+        <div class="settings-container">
+            <ul class="list-group flex-lg-row flex-md-row align-items-center justify-content-center gap-3 mt-3 bg-light rounded-4 p-4">
+                <li class="list-group-item border-0 p-0 rounded-circle active"data-color="#03a9f4"></li>
+                <li class="list-group-item border-0 p-0 rounded-circle"data-color="#ff9800"></li>
+                <li class="list-group-item border-0 p-0 rounded-circle"data-color="#e91e63"></li>
+                <li class="list-group-item border-0 p-0 rounded-circle"data-color="#009688"></li>
+                <li class="list-group-item border-0 p-0 rounded-circle"data-color="#4caf50"></li>
+            </ul>
+        </div>
+        <div class="option-box">
+            <div class="form-check form-switch p-3 d-flex align-items-center flex-column bg-light p-2 mt-3 rounded-4">
+                <label class="form-check-label d-block m-0 mb-2 fs-6 text-center" for="flexSwitchCheckChecked">Random Background</label>
+                <input class="form-check-input m-0 " type="checkbox" id="randomBackground" checked>
+            </div>
+        </div>
+        <div class="option-box">
+            <div class="form-check form-switch p-3 d-flex align-items-center flex-column bg-light p-2 mt-3 rounded-4">
+                <label class="form-check-label d-block m-0 mb-2 fs-6 text-center" for="flexSwitchCheckChecked">Show Bullets</label>
+                <input class="form-check-input m-0 " type="checkbox" id="showBullets" checked>
+            </div>
+        </div>
+        <button class="btn text-white d-block mt-3 m-auto">Reset</button>
+    </div>
+    <!--End Setting-box-->
+
+    <!--Start Nav Bullets-->
+    <div class="nav-bullets position-fixed end-0 top-50 translate-middle-y text-center">
+        <div class="bullet mb-3 rounded-circle position-relative" role="button" data-section=".landing-page">
+            <div class="tool-tip text-white ps-2 pt-1 pb-1 position-absolute d-none" >Home</div>
+        </div>
+        <div class="bullet mb-3 rounded-circle position-relative" role="button" data-section=".about-us">
+            <div class="tool-tip text-white ps-2 pt-1 pb-1 position-absolute d-none" >About Us</div>
+        </div>
+        <div class="bullet mb-3 rounded-circle position-relative" role="button" data-section=".skills">
+            <div class="tool-tip text-white  ps-2 pt-1 pb-1 position-absolute d-none" >Our Skills</div>
+        </div>
+        <div class="bullet mb-3 rounded-circle position-relative" role="button" data-section=".gallery">
+            <div class="tool-tip text-white ps-2 pt-1 pb-1 position-absolute d-none" >Our Gallery</div>
+        </div>
+        <div class="bullet mb-3 rounded-circle position-relative " role="button" data-section=".timeline">
+            <div class="tool-tip text-white ps-2 pt-1 pb-1  position-absolute d-none" >Timeline</div>
+        </div>
+        <div class="bullet mb-3 rounded-circle position-relative" role="button" data-section=".testimonials">
+            <div class="tool-tip text-white ps-2 pt-1 pb-1 position-absolute d-none" >Testimonials</div>
+        </div>
+        <div class="bullet mb-3 rounded-circle position-relative" role="button" data-section=".contact">
+            <div class="tool-tip text-white ps-2 pt-1 pb-1 position-absolute d-none" >Contact Us</div>
+        </div>
+    </div>
+    <!--End Nav Bullets-->
+
+    <!--Start Landing Page-->
+    <div class="landing-page min-vh-100 position-relative text-center">
+        <div class="overlay w-100 h-100 position-absolute"></div>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <a class="navbar-brand text-white" href="#">Smart Agency</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white fs-4"></i></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-section=".about-us" role="button">About US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-section=".skills" role="button">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-section=".gallery" role="button">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-section=".about-us" role="button">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-section=".features" role="button">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-section=".testimonials" role="button">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-section=".contact" role="button">Contact Us</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="website-header w-100 p-2 d-flex flex-column align-items-center justify-content-center text-white position-absolute start-50 top-50 translate-middle">
+            <h1 class="mb-5 fw-bold fs-1">We Are <span>Creative</span> Agency</h1>
+            <p class="fs-5 w-75 mb-0">Lorem Voluptatum, ea illum? Praesentium ex amet,</p>
+            <p class="fs-5 w-75 "> nostrum voluptatum doloribus dolor, veniam at suscipit corporis possimus</p>
+        </div>
+    </div>
+    <!--End Landing Page-->
+
+    <!--Start About Us-->
+    <div class="about-us pt-5 pb-5">
+        <div class="container">
+            <div class="row gap-1 justify-content-center">
+                <div class="col-md-5">
+                    <h2 class="fs-1 mb-4 fw-bold">About Us</h2>
+                    <p class="fs-5 text-black-50 ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, laboriosam accusamus velit nam maxime, fugit veniam nulla debitis quidem id temporibus? Eveniet quisquam expedita illo quo alias ipsa repudiandae accusamus.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid" src="imgs/about3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End About Us-->
+
+    <!--Start Our Skills-->
+    <div class="skills pt-5 pb-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5">Our Skills</h2>
+            <div class="card mb-2 ">
+                <div class="card-body d-flex align-items-center justify-content-between ps-1">
+                    <Span class="fw-bold pe-1 text-center ">HTML</Span>
+                    <div class="progress flex-grow-1 ">
+                        <div class="progress-bar" data-progress="80%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-body d-flex align-items-center justify-content-between ps-1">
+                    <Span class="fw-bold pe-1 ">CSS</Span>
+                    <div class="progress flex-grow-1 ">
+                        <div class="progress-bar" data-progress="75%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-body d-flex align-items-center justify-content-between ps-1">
+                    <Span class="fw-bold pe-1">JS</Span>
+                    <div class="progress flex-grow-1 ">
+                        <div class="progress-bar" data-progress="70%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-body d-flex align-items-center justify-content-between ps-1">
+                    <Span class="fw-bold pe-1">Python</Span>
+                    <div class="progress flex-grow-1 ">
+                        <div class="progress-bar"  data-progress="95%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-body d-flex align-items-center justify-content-between ps-1">
+                    <Span class="fw-bold pe-1">NodeJS</Span>
+                    <div class="progress flex-grow-1 ">
+                        <div class="progress-bar" data-progress="65%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-body d-flex align-items-center justify-content-between ps-1">
+                    <Span class="fw-bold pe-1">MYSQL</Span>
+                    <div class="progress flex-grow-1 ">
+                        <div class="progress-bar" data-progress="90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Our Skills-->
+
+    <!--Start Our Gallery-->
+    <div class="gallery pt-5 pb-5">
+        <div class="container text-center pb-3">
+            <h2 class="mb-5">Our Gallery</h2>
+            <div class="row gap-3 justify-content-center p-2">
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/01.jpg" alt="First Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/02.jpg" alt="Second Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/03.jpg" alt="Third Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/04.jpg" alt="Fourth Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/05.jpg" alt="Fifth Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/06.jpg" alt="Sixth Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/07.jpg" alt="Seventh Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/08.jpg" alt="Eighth Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/09.jpg" alt="Ninth Image">
+                </div>
+                <div class="col-md-2 p-0">
+                    <img class="img-fluid p-1 border" role="button" src="imgs/10.jpg" alt="Tenth Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Our Gallery-->
+
+    <!--Start Timeline-->
+    <div class="timeline pt-5 pb-5 bg-light position-relative">
+        <div class="container position-relative pb-5">
+            <div class="row">
+                <div class="year rounded-pill text-white fw-bold">2023</div>
+                <div class="row row-left mb-2">
+                    <div class="col-md-6 bg-white left p-3 rounded-3 position-relative">
+                        <h3>Testing Heading</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Numquam ad veritatis, unde voluptatum officia quos ducimus adipisci facere, cumque, 
+                            non nihil odio nulla earum impedit dolore deleniti praesentium possimus
+                        </p>
+                    </div>
+                </div>
+                <div class="row flex-row-reverse ms-md-3 m-0">
+                    <div class="col-md-6 bg-white p-3 rounded-3 right position-relative">
+                        <h3>Testing Heading</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Numquam ad veritatis, unde voluptatum officia quos ducimus adipisci facere, cumque, 
+                            non nihil odio nulla earum impedit dolore deleniti praesentium possimus
+                        </p>
+                    </div>
+                </div>
+                <div class="year rounded-pill text-white fw-bold">2022</div>
+                <div class="row row-left mb-2">
+                    <div class="col-md-6 bg-white left p-3 rounded-3 position-relative">
+                        <h3>Testing Heading</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Numquam ad veritatis, unde voluptatum officia quos ducimus adipisci facere, cumque, 
+                            non nihil odio nulla earum impedit dolore deleniti praesentium possimus
+                        </p>
+                    </div>
+                </div>
+                <div class="row flex-row-reverse ms-md-3 m-0">
+                    <div class="col-md-6 bg-white p-3 rounded-3 right position-relative">
+                        <h3>Testing Heading</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Numquam ad veritatis, unde voluptatum officia quos ducimus adipisci facere, cumque, 
+                            non nihil odio nulla earum impedit dolore deleniti praesentium possimus
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Timeline-->
+
+    <!--Start Features-->
+    <div class="features pt-5 pb-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Our Features</h2>
+            <div class="row gap-4 justify-content-center">
+                <div class="col-md-5 col-lg-3">
+                    <img class="img-fluid mb-3  w-50" src="imgs/feature01.png" alt="">
+                    <h4>Development</h4>
+                    <p class="text-black-50">
+                        We are professional marketeers, 
+                        we will do anything you imagine in no time.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-3">
+                    <img class="img-fluid mb-3 w-50" src="imgs/feature02.png" alt="">
+                    <h4>Cloud and Server</h4>
+                    <p class="text-black-50">
+                        We are professional marketeers, 
+                        we will do anything you imagine in no time.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-3">
+                    <img class="img-fluid mb-3 w-50" src="imgs/feature03.png" alt="">
+                    <h4>Graphic Design</h4>
+                    <p class="text-black-50">
+                        We are professional marketeers, 
+                        we will do anything you imagine in no time.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-3">
+                    <img class="img-fluid mb-3 w-50" src="imgs/feature04.png" alt="">
+                    <h4>Business Intelligence</h4>
+                    <p class="text-black-50">
+                        We are professional marketeers, 
+                        we will do anything you imagine in no time.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-3">
+                    <img class="img-fluid mb-3 w-50" src="imgs/feature05.png" alt="">
+                    <h4>Marketing</h4>
+                    <p class="text-black-50">
+                        We are professional marketeers, 
+                        we will do anything you imagine in no time.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-3">
+                    <img class="img-fluid mb-3 w-50" src="imgs/feature06.png" alt="">
+                    <h4>SEO</h4>
+                    <p class="text-black-50">
+                        We are professional marketeers, 
+                        we will do anything you imagine in no time.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--End Features-->
+
+    <!--Start Testimonials-->
+    <div class="testimonials pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-white mb-5">Testimonials</h2>
+            <div class="row justify-content-around gap-3">
+                <div class="col bg-white p-3 rounded-2">
+                    <p class="text-black fst-italic">
+                        Iam very happy with the product its amazing and 
+                        i recieve it very fast and the price was amazing.
+                    </p>
+                    <div class="info d-flex justify-content-start align-items-center gap-3">
+                        <img class="img-fluid w-25" src="imgs/person01.png" alt="">
+                        <div class="title">
+                            <h5>Sundar Pichai</h5>
+                            <span class="text-black-50">CEO At Google</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col bg-white p-3 rounded-2">
+                    <p class="text-black fst-italic">
+                        Iam very happy with the product its amazing and 
+                        i recieve it very fast and the price was amazing.
+                    </p>
+                    <div class="info d-flex justify-content-start align-items-center gap-3">
+                        <img class="img-fluid w-25" src="imgs/person02.png" alt="">
+                        <div class="title">
+                            <h5>Tim Cook</h5>
+                            <span class="text-black-50">CEO At Apple</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col bg-white p-3 rounded-2">
+                    <p class="text-black fst-italic">
+                        Iam very happy with the product its amazing and 
+                        i recieve it very fast and the price was amazing.
+                    </p>
+                    <div class="info d-flex justify-content-start align-items-center gap-3">
+                        <img class="img-fluid w-25" src="imgs/person03.png" alt="">
+                        <div class="title">
+                            <h5>Satya Nadella</h5>
+                            <span class="text-black-50">CEO At Microsoft</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--End Testimonials-->
+
+    <!--Start Contact US-->
+    <div class="contact pt-5 pb-5 position-relative">
+        <div class="overlay position-absolute start-0 top-0 w-100 h-100"></div>
+        <div class="container text-center position-relative pb-5">
+            <h2 class="mb-5">Contact Us</h2>
+            <form class="">
+                <div class="row justify-content-center">
+                    <div class="left col-md-4">
+                        <input class="w-100 p-2 mb-2 rounded-1" type="text" placeholder="Your Name" name="username">
+                        <input class="w-100 p-2 mb-2 rounded-1" type="number" placeholder="Your Phone" name="phone">
+                        <input class="w-100 p-2 mb-2 rounded-1" type="email" placeholder="Your Email" name="email">
+                        <input class="w-100 p-2 mb-2 rounded-1" type="text" placeholder="Subject" name="subject">
+                    </div>
+                    <div class="right col-md-4">
+                        <textarea class="w-100 p-2 rounded-1" name="message" placeholder="Your Message"></textarea>
+                        <input class="w-100 p-2 text-white rounded-1" type="submit" value="Send">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--End Contact US-->
+
+    <!--Start Footer-->
+    <footer class="text-center text-white bg-light" >
+        <div class="container p-4">
+            <section>
+            <div class="row">
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div class="">
+                    <img src="imgs/foot01.webp"class="w-100"/>
+                </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div class="">
+                    <img src="imgs/foot02.webp" class="w-100"/>
+                </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div class=""                >
+                    <img src="imgs/foot03.webp" class="w-100"/>
+                </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div class="">
+                    <img src="imgs/foot04.webp" class="w-100" />
+                </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div class="">
+                    <img src="imgs/foot05.webp" class="w-100"/>
+                </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div class="" >
+                    <img src="imgs/foot06.webp" class="w-100"/>
+                </div>
+                </div>
+            </div>
+            </section>
+        </div>
+        <div class="text-center p-3 last-element">
+            © 2023 Copyright:
+            <a class="text-white text-decoration-none" href="">Omar Taha</a>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--Main JavaScript File-->
+<script src="js/master.js"></script>
+</html>
