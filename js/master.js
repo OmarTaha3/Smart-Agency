@@ -65,6 +65,17 @@ showBullets.addEventListener('change',(e)=>{
     }
 })
 
+//Scroll TO A Specific Section
+function scrollToSection(elements){
+    elements.forEach((ele) =>{
+        ele.addEventListener(('click'),(e)=>{
+            document.querySelector(e.target.dataset.section).scrollIntoView({
+                behavior:'smooth'
+            })
+        })
+    })
+}
+
 //Reset Button
 document.querySelector('.btn').onclick = () => {
     localStorage.removeItem('color-option')
@@ -80,7 +91,6 @@ document.querySelector('.btn').onclick = () => {
     showBullets.checked = true
     document.querySelector('.nav-bullets').style.display = 'block'
 }
-
 
 
 //Skills Selector
@@ -140,17 +150,6 @@ document.addEventListener('click',(e)=>{
         document.querySelector('.popup-overlay').remove()
     }
 })
-
-//Scroll TO A Specific Section
-function scrollToSection(elements){
-    elements.forEach((ele) =>{
-        ele.addEventListener(('click'),(e)=>{
-            document.querySelector(e.target.dataset.section).scrollIntoView({
-                behavior:'smooth'
-            })
-        })
-    })
-}
 let allBullets = document.querySelectorAll('.nav-bullets .bullet')
 scrollToSection(allBullets)
 let allLinks = document.querySelectorAll('.nav-item a')
